@@ -9,8 +9,13 @@ modules:
   - type: dnf
     install:
       packages:
-      - kvantum
-      - plymouth-plugin-script
+        - kvantum
+        - plymouth-plugin-script
+
+  - type: copy
+    from: ghcr.io/winblues/atp-common
+    src: /system-files
+    dest: /
 
   - type: script
     snippets:
